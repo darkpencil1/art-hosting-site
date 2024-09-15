@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import character from "../../../resources/images/character-concept.png";
+import character from "../../../resources/images/herequest-tutkija.png";
 import { motion, useInView, Variants } from "framer-motion";
 
 const charVariant: Variants = {
@@ -25,7 +25,7 @@ const IntroCharacters = () => {
           type: "tween",
         }}
         variants={charVariant}
-        height="600px"
+        height="700px"
       />
     </div>
   );
