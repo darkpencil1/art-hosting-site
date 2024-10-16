@@ -1,32 +1,88 @@
-import path from "path";
 import { Request, Response } from "express";
-import products from "../resources/products";
+import { PrismaClient } from "@prisma/client";
+import {
+  isValidProduct,
+  replaceProducts,
+} from "src/helpers/product.controller.helpers";
+import path from "path";
 import IProduct from "@shared/types/ProductInterface";
 
-export const getAllProducts = (_: Request, res: Response) => {
+const prisma = new PrismaClient();
+
+// Take in multiple products from JSON in request body
+const eatProducts = async (req: Request, res: Response) => {
   try {
-    res.status(200);
-    res.json(products);
-  } catch (e) {
-    res.json(e);
+    const productsData: IProduct[] = req.body;
+
+    // Check if request body is an array
+    if (!Array.isArray(productsData)) {
+      return res
+        .status(400)
+        .json({ error: "Request body must be an array of products" });
+    }
+
+    // Validate each product in the array
+    for (const productData of productsData) {
+      if (!isValidProduct(productData)) {
+        return res
+          .status(400)
+          .json({ error: "Invalid product structure in request body" });
+      }
+    }
+    // Replace old products with new ones
+    await replaceProducts(productsData);
+    res.status(200).send("Products replaced successfully");
+  } catch (error) {
+    console.error("Error creating products:", error);
+    return res.status(500).json({ error: "Failed to create products" });
   }
 };
 
-export const getProductWithId = (req: Request, res: Response) => {
-  const id = req.params.id;
-
+const getAllProducts = async (_: Request, res: Response) => {
   try {
-    const product = products.find(
-      (product: IProduct) => product.id.toString() === id
-    ) as IProduct;
-    if (product) res.json(product);
-    else res.send("No product found with provided id.");
-  } catch (e) {
-    res.json(e);
+    const products = await prisma.product.findMany();
+    return res.status(200).json(products);
+  } catch (error) {
+    console.error("Error retrieving products:", error);
+    return res.status(500).json({ error: "Failed to retrieve products" });
   }
 };
 
-export const getImage = (req: Request, res: Response) => {
+const getProductWithId = async (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  // Convert the id to a number (assuming ID is numeric)
+  const productId = Number(id);
+
+  // Check if the id is a valid number
+  if (isNaN(productId)) {
+    return res.status(400).json({ error: "Invalid product ID" });
+  }
+
+  try {
+    // Find the product in the database by ID
+    const product = await prisma.product.findUnique({
+      where: {
+        id: productId,
+      },
+    });
+
+    // If product is not found, return 404
+    if (!product) {
+      return res
+        .status(404)
+        .json({ error: `Product with ID ${productId} not found` });
+    }
+
+    // Return the found product
+    return res.status(200).json(product);
+  } catch (error) {
+    console.error("Error retrieving product by ID:", error);
+    return res.status(500).json({ error: "Failed to retrieve product" });
+  }
+};
+
+const getImage = (req: Request, res: Response) => {
   const imageName = req.params.imageName;
 
   const imagePath = path.join(
@@ -45,3 +101,5 @@ export const getImage = (req: Request, res: Response) => {
     }
   });
 };
+
+export { eatProducts, getAllProducts, getProductWithId, getImage };

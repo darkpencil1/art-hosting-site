@@ -1,7 +1,9 @@
-export enum Orientation {
-  PORTRAIT = "portrait",
-  LANDSCAPE = "landscape",
-}
+//export enum Orientation {
+//PORTRAIT = "portrait",
+//LANDSCAPE = "landscape",
+//}
+
+export type Orientation = "portrait" | "landscape";
 
 export type ProductType = "poster" | "tag";
 

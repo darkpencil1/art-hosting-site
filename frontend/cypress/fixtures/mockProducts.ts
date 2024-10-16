@@ -1,4 +1,4 @@
-import IProduct, { Orientation } from "../../../shared/types/ProductInterface";
+import IProduct from "../../../shared/types/ProductInterface";
 
 const mockProducts: IProduct[] = [
   {
@@ -11,7 +11,7 @@ const mockProducts: IProduct[] = [
     images: ["image1-1.jpg"],
     imageUrl: "image1.jpg",
     price: 100,
-    orientation: Orientation.PORTRAIT,
+    orientation: "portrait",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const mockProducts: IProduct[] = [
     images: ["image2-1.jpg"],
     imageUrl: "image2.jpg",
     price: 200,
-    orientation: Orientation.LANDSCAPE,
+    orientation: "landscape",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const mockProducts: IProduct[] = [
     images: ["image3-1.jpg"],
     imageUrl: "image3.jpg",
     price: 300,
-    orientation: Orientation.PORTRAIT,
+    orientation: "portrait",
   },
 ];
 
