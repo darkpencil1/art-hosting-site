@@ -25,10 +25,15 @@ jobs:
         working-directory: ./frontend
         run: npm install
 
-      # Start frontend
-      - name: Start frontend
+      # Start the frontend in the background
+      - name: Start frontend server
         working-directory: ./frontend
-        run: npm start
+        run: npm start &
+
+      # Wait for frontend to be ready (waits for port 3000 by default)
+      - name: Wait for frontend to be ready
+        run: |
+          timeout 60 sh -c 'until nc -zv localhost 3000; do sleep 1; done'
 
       # Run Cypress tests
       - name: Run Cypress tests
