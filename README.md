@@ -4,6 +4,16 @@
 This web app is a hobby project where my goal is to combine an art portfolio and eCommerce site.
 Special flavour is given by the strong thematic elements pulled from the art itself.
 
+### Notable tools used: 
+- TypeScript
+- React
+  - Styled Components
+  - Cypress
+  - TanStack  
+- NodeJs
+  - Prisma
+- PostgreSQL 
+
 ## Running the project
 ### Requirements
 For running the project with docker you'll need
@@ -26,20 +36,14 @@ For running the project with docker you'll need
 ### backend
 Contains code for running NodeJs. It's further split into controllers that provide functions for spesific content types and routers that serve endpoints. 
 Additional code is split into separate helper folder to keep the codebase clean.
+Uses Prisma for database operations. Currently stores page views for individual products.
 
 ### frontend
 Has the code for running React client. Bundling is done by vite. src contains components folder with Pages and the actual components split per page that is using them. Additional the client utilizes React context for managing state for cart and setting the currently viewed product. Context (in src/state/) is made lightweight by using TanStack (in src/hooks/) to handle fetching and state management for data originating from backend.
 Site uses lot of animations, these are done with the excellent animation library done by these folks: https://www.framer.com/motion/
 
 ### Typing
-Types shared by frontend and backend and found in project root at shared/. Frontend furhter has types it only uses at src/resources/interfaces/
-
-### Notable tools used: 
-- TypeScript
-- React
-- NodeJs
-- Cypress
-- TanStack
+Types shared by frontend and backend and found in project root at shared/. Frontend further has types it only uses at src/resources/interfaces/ 
 
 ## Credits
 Design, code and art by darkpencil1
