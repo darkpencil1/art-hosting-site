@@ -1,4 +1,4 @@
-import { Orientation } from "../../../resources/interfaces/ProductInterface";
+import { Orientation } from "@shared/types/ProductInterface";
 import StyledLanderProductImg from "./LanderProductImg.style";
 
 export type LanderProductImgProps = {

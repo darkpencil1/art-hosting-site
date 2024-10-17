@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Orientation } from "../../../resources/interfaces/ProductInterface";
+import { Orientation } from "@shared/types/ProductInterface";
 import Icon from "../../baseComponents/Icon";
 import StyledLanderImg, { StyledLanderImgProps } from "./LanderImg.style";
 

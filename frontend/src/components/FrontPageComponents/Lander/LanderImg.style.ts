@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
-import { Orientation } from "../../../resources/interfaces/ProductInterface";
+import { Orientation } from "@shared/types/ProductInterface";
 
 export type StyledLanderImgProps = {
   orientation?: Orientation;

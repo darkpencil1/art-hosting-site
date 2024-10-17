@@ -12,7 +12,7 @@ import productReducer, {
   ProductAction,
   ProductState,
 } from "../reducers/productReducer";
-import IProduct from "../../resources/interfaces/ProductInterface";
+import IProduct from "@shared/types/ProductInterface";
 import axios from "axios";
 
 // Define the combined state and action types

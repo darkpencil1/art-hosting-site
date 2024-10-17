@@ -1,5 +1,4 @@
-import { DropdownOption } from "../../components/productPageComponents/AddToCartDropdown";
-import IProduct from "../../resources/interfaces/ProductInterface";
+import IProduct from "@shared/types/ProductInterface";
 import _ from "lodash";
 
 export type CartProduct = Pick<

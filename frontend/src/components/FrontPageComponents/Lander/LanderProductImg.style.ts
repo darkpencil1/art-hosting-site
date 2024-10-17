@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Orientation } from "../../../resources/interfaces/ProductInterface";
+import { Orientation } from "@shared/types/ProductInterface";
 
 type LanderImgProps = {
   top: number;
