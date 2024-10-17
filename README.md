@@ -47,7 +47,7 @@ Styling is done with styled-components library.
 ### Typing
 Types shared by frontend and backend and found in project root at shared/. Frontend further has types it only uses at src/resources/interfaces/ 
 
-### GitHb Actions
+### GitHub Actions
 Actions run Cypress tests for frontend on each push to main branch.
 
 ## Credits
