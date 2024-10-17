@@ -47,7 +47,7 @@ const Header: React.FC = () => {
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.1 }} // Add a smooth transition effect
           src={logo}
-          alt="questpen"
+          alt="Ville's Art Cave"
           width="60px"
         />
       </motion.div>

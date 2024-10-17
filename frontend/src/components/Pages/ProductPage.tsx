@@ -6,12 +6,14 @@ import Row from "../baseComponents/Row.style";
 import { useEffect } from "react";
 import { AddToCartPanel } from "../productPageComponents/AddToCartPanel";
 import { useAppContext } from "../../state/contexts/AppContextProvider";
+import useIncrementProductViews from "../../hooks/useIncrementProductViews";
 
 const ProductPage = () => {
   const [searchParams] = useSearchParams();
   const id = searchParams.get("id");
   const { fetchProduct } = useAppContext();
 
+  useIncrementProductViews(Number(id));
   useEffect(() => {
     fetchProduct(Number(id));
   }, []);

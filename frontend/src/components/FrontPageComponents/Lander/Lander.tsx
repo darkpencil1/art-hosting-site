@@ -29,11 +29,12 @@ const Lander = () => {
     <StyledLander>
       <div className="lander__row">
         <div className="lander__text-container">
-          <h1 className="lander__title">Illustrated quests</h1>
+          <h1 className="lander__title">Illustrations</h1>
           <h3 className="lander__subtitle">for various aspects of life</h3>
           <p>
-            Hi, I'm an artist who illustrates quests from various aspects of
-            life. Feel free to browse the quest catalog!
+            Hi, I'm an artist who makes illustrations with the goal of making
+            our pursuits feel more meaningful. Feel free to browse the quest
+            catalog!
           </p>
           <Link content="To catalog" href="/kauppa" />
         </div>

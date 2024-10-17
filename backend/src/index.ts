@@ -3,6 +3,7 @@ import cors from "cors";
 import productRouter from "./routers/product.router";
 import questRouter from "./routers/quest.router";
 import achievementRouter from "./routers/achievement.router";
+import dbRouter from "./routers/db.router";
 import path from "path";
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(express.static(path.join(__dirname, "..", "..", "client/build")));
 app.use("/api/product", productRouter);
 app.use("/api/quest", questRouter);
 app.use("/api/achievement", achievementRouter);
+app.use("/api/db", dbRouter);
 //As default send back client index.html
 app.get("*", (_, res) => {
   res.sendFile(path.join(__dirname, "..", "..", "client/build", "index.html"));

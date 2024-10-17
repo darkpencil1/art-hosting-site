@@ -4,10 +4,7 @@ const MissionBanner = () => {
   return (
     <StyledMissionBanner>
       <h1>Mission</h1>
-      <p>
-        Build a catalog of illustrated quests for real life stuff, inspired RPG
-        quests.
-      </p>
+      <p>Make art that makes our pursuits feel more meaningful.</p>
     </StyledMissionBanner>
   );
 };
