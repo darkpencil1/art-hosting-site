@@ -12,7 +12,8 @@ Special flavour is given by the strong thematic elements pulled from the art its
   - TanStack  
 - NodeJs
   - Prisma
-- PostgreSQL 
+- PostgreSQL
+- GitHub Actions
 
 ## Running the project
 ### Requirements
@@ -41,9 +42,13 @@ Uses Prisma for database operations. Currently stores page views for individual 
 ### frontend
 Has the code for running React client. Bundling is done by vite. src contains components folder with Pages and the actual components split per page that is using them. Additional the client utilizes React context for managing state for cart and setting the currently viewed product. Context (in src/state/) is made lightweight by using TanStack (in src/hooks/) to handle fetching and state management for data originating from backend.
 Site uses lot of animations, these are done with the excellent animation library done by these folks: https://www.framer.com/motion/
+Styling is done with styled-components library.
 
 ### Typing
 Types shared by frontend and backend and found in project root at shared/. Frontend further has types it only uses at src/resources/interfaces/ 
+
+### GitHb Actions
+Actions run Cypress tests for frontend on each push to main branch.
 
 ## Credits
 Design, code and art by darkpencil1
