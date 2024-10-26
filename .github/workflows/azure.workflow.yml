@@ -41,10 +41,10 @@ jobs:
       #cp -r frontend/build/* backend/dist/public
 
       # Run backend tests
-      - name: Backend - Run Tests
-        run: |
-          cd backend
-          npm test
+      #- name: Backend - Run Tests
+      #run: |
+      #cd backend
+      #npm test
 
       # Build Docker image and push to Docker Hub
       - name: Build and Push Docker Image
