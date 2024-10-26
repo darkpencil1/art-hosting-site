@@ -70,3 +70,6 @@ jobs:
                            --plan WebAppServicePlan \
                            --name art-hosting-site \
                            --deployment-container-image-name darkpencil1/art-hosting-site:latest
+          az webapp config set --resource-group WebAppResourceGroup \
+                               --name art-hosting-site \
+                               --linux-fx-version "DOCKER|darkpencil1/art-hosting-site:latest"
