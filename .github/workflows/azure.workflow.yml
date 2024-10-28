@@ -28,6 +28,12 @@ jobs:
           npm install
           npm run build
 
+      # Install backend dependencies and build
+      - name: Frontend - Test
+        run: |
+          cd frontend
+          npm run cy:run
+
       # Build Docker image and push to Docker Hub
       - name: Build and Push Docker Image
         run: |
