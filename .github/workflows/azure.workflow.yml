@@ -28,13 +28,6 @@ jobs:
           npm install
           npm run build
 
-      # Install frontend dependencies and build
-      - name: Frontend - Install and Build
-        run: |
-          cd frontend
-          npm install
-          npm run build
-
       # Build Docker image and push to Docker Hub
       - name: Build and Push Docker Image
         run: |
