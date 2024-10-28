@@ -19,32 +19,21 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: "18.x"
+          node-version: "20.11.x"
 
-      # Install backend dependencies
-      - name: Backend - Install Dependencies
+      # Install backend dependencies and build
+      - name: Backend - Install and Build
         run: |
           cd backend
           npm install
+          npm run build
 
-      ## Install frontend dependencies and build
-      #- name: Frontend - Install and Build
-      #run: |
-      #cd frontend
-      #npm install
-      #npm run build
-
-      ## Copy frontend build to backend dist/public
-      #- name: Copy Frontend to Backend
-      #run: |
-      #mkdir -p backend/dist/public
-      #cp -r frontend/build/* backend/dist/public
-
-      # Run backend tests
-      #- name: Backend - Run Tests
-      #run: |
-      #cd backend
-      #npm test
+      # Install frontend dependencies and build
+      - name: Frontend - Install and Build
+        run: |
+          cd frontend
+          npm install
+          npm run build
 
       # Build Docker image and push to Docker Hub
       - name: Build and Push Docker Image
