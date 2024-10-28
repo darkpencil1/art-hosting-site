@@ -1,5 +1,5 @@
 # Art hosting e-commerce site
-## See at: https://art-hosting-site.onrender.com
+## See at: https://art-hosting-site.azurewebsites.net/
 
 This web app is a hobby project where my goal is to combine an art portfolio and eCommerce site.
 Special flavour is given by the strong thematic elements pulled from the art itself.
@@ -14,6 +14,7 @@ Special flavour is given by the strong thematic elements pulled from the art its
   - Prisma
 - PostgreSQL
 - GitHub Actions
+- Azure
 
 ## Running the project
 ### Requirements
@@ -47,8 +48,8 @@ Styling is done with styled-components library.
 ### Typing
 Types shared by frontend and backend and found in project root at shared/. Frontend further has types it only uses at src/resources/interfaces/ 
 
-### GitHub Actions
-Actions run Cypress tests for frontend on each push to main branch.
+### Deployment
+Project uses GitHub Actions for its CI/CD. First the project is build and tested. Then the client is bundled into backend and backend is packaged into a Docker container which is pushed into a private repo in Docker Hub. Azure web app is then created which pulls the container from Docker Hub and runs it.
 
 ## Credits
 Design, code and art by darkpencil1
