@@ -28,11 +28,20 @@ jobs:
           npm install
           npm run build
 
-      # Install backend dependencies and build
-      - name: Frontend - Test
+      # Start the frontend in the background
+      - name: Start frontend server
+        working-directory: ./frontend
+        run: npm start &
+
+      # Wait for frontend to be ready (waits for port 3000 by default)
+      - name: Wait for frontend to be ready
         run: |
-          cd frontend
-          npm run cy:run
+          timeout 60 sh -c 'until nc -zv localhost 3000; do sleep 1; done'
+
+      # Run Cypress tests against the running frontend
+      - name: Run Cypress tests
+        working-directory: ./frontend
+        run: npm run cy:run
 
       # Build Docker image and push to Docker Hub
       - name: Build and Push Docker Image
