@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node -r ./tsconfig-paths-bootstrap.js ./dist/backend/src/index.js",
     "dev": "nodemon -e ts,js,json --watch ./src --exec ts-node -r tsconfig-paths/register ./src/index.ts",
-    "build": "cd ../frontend/ && npm run build && cd ../backend/ && tsc && mkdir -p dist/client/build && cp -R ../frontend/dist/* dist/client/build/ && npm run copy-resources && cp ./tsconfig-paths-bootstrap.js ./dist/backend/",
+    "build": "cd ../frontend/ && npm i && npm run build && cd ../backend/ && tsc && mkdir -p dist/client/build && cp -R ../frontend/dist/* dist/client/build/ && npm run copy-resources && cp ./tsconfig-paths-bootstrap.js ./dist/backend/",
     "test": "jest",
     "copy-resources": "copyfiles -u 1 \"src/resources/**/*\" dist/backend/src/"
   },

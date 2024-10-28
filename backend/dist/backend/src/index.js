@@ -8,6 +8,7 @@ const cors_1 = __importDefault(require("cors"));
 const product_router_1 = __importDefault(require("./routers/product.router"));
 const quest_router_1 = __importDefault(require("./routers/quest.router"));
 const achievement_router_1 = __importDefault(require("./routers/achievement.router"));
+const db_router_1 = __importDefault(require("./routers/db.router"));
 const path_1 = __importDefault(require("path"));
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 8080;
@@ -22,6 +23,7 @@ app.use(express_1.default.static(path_1.default.join(__dirname, "..", "..", "cli
 app.use("/api/product", product_router_1.default);
 app.use("/api/quest", quest_router_1.default);
 app.use("/api/achievement", achievement_router_1.default);
+app.use("/api/db", db_router_1.default);
 //As default send back client index.html
 app.get("*", (_, res) => {
     res.sendFile(path_1.default.join(__dirname, "..", "..", "client/build", "index.html"));

@@ -1,0 +1,55 @@
+# Base image for Node.js
+FROM node:20.11.1 as build-backend
+
+# Set working directory for backend
+WORKDIR /app/backend
+
+# Install dependencies for backend
+COPY backend/package*.json ./
+RUN npm install
+
+# Copy backend source files
+COPY backend/ .
+COPY ./shared ../shared
+
+# Run TypeScript compiler
+#RUN tsc
+
+# Build frontend
+FROM node:20.11.1 as build-frontend
+
+# Set working directory for frontend
+WORKDIR /app/frontend
+
+# Install dependencies and build frontend
+COPY frontend/package*.json ./
+RUN npm install
+COPY frontend/ .
+COPY ./shared ../shared
+RUN npm run build
+
+# Main stage for the final container image
+FROM node:20.11.1 as final
+
+# Set working directory for final container
+WORKDIR /app
+
+# Copy backend build and frontend build
+COPY --from=build-backend /app/backend /app/backend
+COPY --from=build-backend /app/shared /app/shared
+COPY --from=build-backend /app/shared /app/backend/dist/shared
+COPY --from=build-frontend /app/frontend/dist /app/backend/dist/client/build/
+
+WORKDIR /app/backend
+
+# Copy resources to dist folder
+RUN npm run copy-resources
+RUN cp ./tsconfig-paths-bootstrap.js ./dist/backend
+
+# Set environment variables and expose ports
+ENV NODE_ENV=production
+EXPOSE 8080
+
+# Start backend server which serves frontend 
+CMD ["node","-r","./tsconfig-paths-bootstrap.js", "dist/backend/src/index.js"]
+
