@@ -20,8 +20,7 @@ const StyledLanderProductBrief = styled.div`
 
   img {
     object-fit: contain;
-    max-width: 200px;
-    max-height: 160px;
+    height: 160px;
     margin-top: auto;
     margin-bottom: auto;
     border-radius: ${(p) => p.theme.br.br_medium};

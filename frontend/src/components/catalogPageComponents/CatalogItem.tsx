@@ -1,10 +1,8 @@
 import { ICatalogItem } from "@shared/types/CatalogInterface";
 import { useState } from "react";
-import Image from "../baseComponents/Image.style";
+import Img from "../baseComponents/Img";
 import StyledCatalogItem from "./CatalogItem.style";
 import CatalogItemModal from "./CatalogItemModal";
-import quest from "../../resources/images/quest-icon.svg";
-import achievement from "../../resources/images/achievement-tag-icon.svg";
 
 const CatalogItem = ({ img, description, name }: ICatalogItem) => {
   const [showModal, setShowModal] = useState<boolean>(false);
@@ -25,7 +23,7 @@ const CatalogItem = ({ img, description, name }: ICatalogItem) => {
   return (
     <StyledCatalogItem onClick={() => setShowModal(true)}>
       <div className="catalog__img-container">
-        <Image
+        <Img
           src={img}
           className={`${isDefaultImg(img) ? "catalog__img--small" : ""}`}
         />

@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import Col from "../baseComponents/Col.style";
 import Row from "../baseComponents/Row.style";
-import Image from "../baseComponents/Image.style";
 import Button from "../baseComponents/Button";
 import IProduct from "@shared/types/ProductInterface";
 import StyledProductItem from "./ProductItem.style";
+import BlurryImage from "../baseComponents/BlurryImage";
 
 const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
-  const { id, imageUrl, name, snapshot, productType, price } = product;
+  const { id, imageUrl, preview, name, snapshot, productType, price } = product;
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -21,11 +21,12 @@ const ProductItem: React.FC<{ product: IProduct }> = ({ product }) => {
   return (
     <StyledProductItem>
       <Col className="product__img-container">
-        <Image
+        <BlurryImage
           className={`product__img ${
             productType === "tag" ? "product__img--tag" : ""
           }`}
           src={`${imageUrl}`}
+          preview={`${preview}`}
           alt={name}
         />
       </Col>

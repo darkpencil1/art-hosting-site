@@ -5,7 +5,9 @@ import LanderProductBrief, {
   LanderProductBriefProps,
 } from "./LanderProductBrief";
 import poster from "../../../resources/images/Taidonjahti_thumbnail.jpg";
+import posterPreview from "../../../resources/images/taidonjahti_thumbnail-preview.jpg";
 import tag from "../../../resources/images/taidonjahti-merkki-teksti.png";
+import tagPreview from "../../../resources/images/taidonjahti-tag-preview.png";
 import tagIcon from "../../../resources/images/achievement-tag-icon.svg";
 import questIcon from "../../../resources/images/quest-icon.svg";
 
@@ -15,12 +17,14 @@ const productTypes: Array<LanderProductBriefProps> = [
     title: "Quest poster",
     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum.",
     icon: questIcon,
+    preview: posterPreview,
   },
   {
     img: tag,
     title: "Achievement tag",
     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum.",
     icon: tagIcon,
+    preview: tagPreview,
   },
 ];
 

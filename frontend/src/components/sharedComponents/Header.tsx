@@ -1,10 +1,10 @@
-import Image from "../baseComponents/Image.style";
 import StyledHeader from "./Header.style";
 import logo from "../../resources/images/logo.png";
 import herequest from "../../resources/images/herequest.png";
 import { AnimatePresence, motion, useAnimation, Variants } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import CartIcon from "../cartComponents/CartIcon";
+import Img from "../baseComponents/Img";
 
 const navVariant: Variants = {
   animate: {
@@ -42,7 +42,7 @@ const Header: React.FC = () => {
   return (
     <StyledHeader animate={controls} transition={{ duration: 0.4 }}>
       <motion.div className="nav__logo" onClick={() => navigate("/")}>
-        <Image
+        <Img
           whileHover={{ scale: 1.1 }} // Scale the image up by 10% on hover
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.1 }} // Add a smooth transition effect
@@ -52,7 +52,7 @@ const Header: React.FC = () => {
         />
       </motion.div>
       <AnimatePresence>
-        <Image
+        <Img
           src={herequest}
           className="header__logo-name"
           key="header-title"
