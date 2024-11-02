@@ -21,6 +21,7 @@ const CatalogItemContainer = ({
           return (
             <CatalogItem
               img={item.img}
+              preview={item.preview}
               name={item.name}
               description={item.description}
             />

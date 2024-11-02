@@ -5,13 +5,11 @@ import { FC, useEffect, useState } from "react";
 import x from "../../resources/images/x-button.png";
 import StyledCatalogItemModal from "./CatalogItemModal.style";
 
-interface ModalProps extends ICatalogItem {
-  show: boolean;
+interface ModalProps extends Omit<ICatalogItem, "preview"> {
   onClose: () => void;
 }
 
 const CatalogItemModal: FC<ModalProps> = ({
-  show,
   onClose,
   img,
   name,

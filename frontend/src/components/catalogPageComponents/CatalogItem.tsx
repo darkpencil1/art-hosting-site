@@ -1,10 +1,10 @@
 import { ICatalogItem } from "@shared/types/CatalogInterface";
 import { useState } from "react";
-import Img from "../baseComponents/Img";
 import StyledCatalogItem from "./CatalogItem.style";
 import CatalogItemModal from "./CatalogItemModal";
+import BlurryImage from "../baseComponents/BlurryImage";
 
-const CatalogItem = ({ img, description, name }: ICatalogItem) => {
+const CatalogItem = ({ img, preview, description, name }: ICatalogItem) => {
   const [showModal, setShowModal] = useState<boolean>(false);
 
   const handleCloseModal = () => {
@@ -23,8 +23,9 @@ const CatalogItem = ({ img, description, name }: ICatalogItem) => {
   return (
     <StyledCatalogItem onClick={() => setShowModal(true)}>
       <div className="catalog__img-container">
-        <Img
+        <BlurryImage
           src={img}
+          preview={preview}
           className={`${isDefaultImg(img) ? "catalog__img--small" : ""}`}
         />
       </div>
@@ -34,7 +35,6 @@ const CatalogItem = ({ img, description, name }: ICatalogItem) => {
           img={img}
           description={description}
           name={name}
-          show={showModal}
           onClose={handleCloseModal}
         />
       )}
