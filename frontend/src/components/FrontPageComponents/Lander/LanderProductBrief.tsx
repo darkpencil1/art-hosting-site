@@ -24,7 +24,7 @@ const LanderProductBrief = ({
         preview={preview}
         alt="Product brief icon"
         height="160px"
-        width="auto"
+        width="160px"
       />
       <div className="landerBrief__text-container">
         <span>
