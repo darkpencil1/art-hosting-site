@@ -37,10 +37,10 @@ const Lander = () => {
           <h3 className="lander__subtitle">for various aspects of life</h3>
           <p>
             Hi, I'm an artist who makes illustrations with the goal of making
-            our pursuits feel more meaningful. Feel free to browse the quest
+            our pursuits feel more meaningful. Feel free to browse the art
             catalog!
           </p>
-          <Link content="To catalog" href="/kauppa" />
+          <Link content="To catalog" href="/catalog" />
         </div>
         <LanderHeart />
       </div>
