@@ -1,5 +1,5 @@
 import StyledLander from "./Lander.style";
-import Link from "../../baseComponents/Link";
+import Hyperlink from "../../baseComponents/Hyperlink";
 import LanderHeart from "./LanderHeart";
 import LanderProductBrief, {
   LanderProductBriefProps,
@@ -40,7 +40,7 @@ const Lander = () => {
             our pursuits feel more meaningful. Feel free to browse the art
             catalog!
           </p>
-          <Link content="To catalog" href="/catalog" />
+          <Hyperlink content="To catalog" href="/catalog" />
         </div>
         <LanderHeart />
       </div>

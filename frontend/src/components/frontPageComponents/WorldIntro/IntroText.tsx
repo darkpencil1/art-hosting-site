@@ -1,4 +1,4 @@
-import Link from "../../baseComponents/Link";
+import Hyperlink from "../../baseComponents/Hyperlink";
 import StyledIntroText from "./IntroText.style";
 
 const IntroText = () => {
@@ -14,7 +14,7 @@ const IntroText = () => {
           cillum sint consectetur cupidatat.
         </p>
       </div>
-      <Link href="/" content="To the shop" />
+      <Hyperlink href="/shop" content="To the shop" />
     </StyledIntroText>
   );
 };

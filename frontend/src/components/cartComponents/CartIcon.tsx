@@ -28,7 +28,7 @@ const CartIcon = () => {
 
   return (
     <StyledCartIcon
-      onClick={() => navigate("/ostoskori")}
+      onClick={() => navigate("/cart")}
       whileTap={{ scale: 0.95 }}
     >
       <motion.img src={bag} className="cart__icon" animate={controls} />

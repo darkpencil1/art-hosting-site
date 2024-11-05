@@ -1,5 +1,5 @@
 import { useAppContext } from "../../state/contexts/AppContextProvider";
-import Link from "../baseComponents/Link";
+import Hyperlink from "../baseComponents/Hyperlink";
 import CartItemList from "../cartComponents/CartItemList";
 import CartSummary from "../cartComponents/CartSummary";
 import StyledCart from "./Cart.style";
@@ -21,7 +21,7 @@ const Cart = () => {
         ) : (
           <div className="cart__empty-container">
             <h3>Cart is empty.</h3>
-            <Link content="Go to shop" href="/shop" />
+            <Hyperlink content="Go to shop" href="/shop" />
           </div>
         )}
       </div>

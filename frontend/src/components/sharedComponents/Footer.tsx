@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Col from "../baseComponents/Col.style";
 import StyledFooter from "./Footer.style";
 
@@ -6,9 +7,9 @@ type FooterLink = {
   link: string;
 };
 const links: Array<FooterLink> = [
-  { text: "FAQ", link: "#/misc#ukk" },
-  { text: "Returns", link: "#/misc#qa-1" },
-  { text: "Contact", link: "#/misc#yhteydenotto" },
+  { text: "FAQ", link: "/misc#faq" },
+  { text: "Returns", link: "/misc#qa-1" },
+  { text: "Contact", link: "/misc#contact" },
 ];
 const pageLinks: Array<FooterLink> = [
   { text: "Home", link: "/" },
@@ -29,7 +30,7 @@ const Footer = () => {
             {links.map((link: FooterLink, i: number) => {
               return (
                 <li className="footer__link" key={`footer-general-${i}`}>
-                  <a href={link.link}>{link.text}</a>
+                  <Link to={link.link}>{link.text}</Link>
                 </li>
               );
             })}
@@ -41,7 +42,7 @@ const Footer = () => {
             {pageLinks.map((link: FooterLink, i: number) => {
               return (
                 <li className="footer__link" key={`footer-page-${i}`}>
-                  <a href={link.link}>{link.text}</a>
+                  <Link to={link.link}>{link.text}</Link>
                 </li>
               );
             })}
@@ -53,7 +54,7 @@ const Footer = () => {
             {socialLinks.map((link: FooterLink, i: number) => {
               return (
                 <li className="footer__link" key={`footer-social-${i}`}>
-                  <a href={link.link}>{link.text}</a>
+                  <Link to={link.link}>{link.text}</Link>
                 </li>
               );
             })}

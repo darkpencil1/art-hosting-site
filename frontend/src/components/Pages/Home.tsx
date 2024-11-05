@@ -1,8 +1,8 @@
 import React from "react";
-import Redirect from "../FrontPageComponents/Redirect/Redirect";
-import Lander from "../FrontPageComponents/Lander/Lander";
-import Intro from "../FrontPageComponents/WorldIntro/Intro";
-import AboutUs from "../FrontPageComponents/About/AboutUs";
+import Redirect from "../frontPageComponents/Redirect/Redirect";
+import Lander from "../frontPageComponents/Lander/Lander";
+import Intro from "../frontPageComponents/WorldIntro/Intro";
+import AboutUs from "../frontPageComponents/About/AboutUs";
 import StyledHome from "./Home.style";
 
 const Home: React.FC = () => {

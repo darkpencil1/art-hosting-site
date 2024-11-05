@@ -3,25 +3,25 @@ export type QA = { id: number; question: string; answer: string };
 const questions: QA[] = [
   {
     id: 1,
-    question: "Voiko tuotteita palauttaa?",
+    question: "Can purchased items be returned?",
     answer:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint.",
   },
   {
     id: 2,
-    question: "Mitä jos tuote on viallinen?",
+    question: "What if my product is defective?",
     answer:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint.",
   },
   {
     id: 3,
-    question: "Kuinka kauan toimitus kestää?",
+    question: "How long does the shipping take?",
     answer:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint.",
   },
   {
     id: 4,
-    question: "Mitä jos tuotetta ei näy eikä kuulu?",
+    question: "What if my product doesn't arrive?",
     answer:
       "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint.",
   },

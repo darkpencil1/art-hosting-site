@@ -1,6 +1,6 @@
 import StyledAboutUs from "./AboutUs.style";
 import Value from "./Value";
-import Link from "../../baseComponents/Link";
+import Hyperlink from "../../baseComponents/Hyperlink";
 import mastery from "../../../resources/images/mastery-icon.svg";
 import finland from "../../../resources/images/finland-icon.svg";
 import multiplicity from "../../../resources/images/multiplicity-icon.svg";
@@ -28,7 +28,7 @@ const AboutUs = () => {
           enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
           exercitation amet. Nisi anim cupidatat excepteur officia.
         </p>
-        <Link href="about" content="Read more" />
+        <Hyperlink href="about" content="Read more" />
       </div>
       <div className="about-us__value-container">
         {values.map((value: Value, i: number) => {

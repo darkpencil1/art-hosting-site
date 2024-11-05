@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAppContext } from "../../state/contexts/AppContextProvider";
 import { CartItem, SecondaryProduct } from "../../state/reducers/cartReducer";
 import StyledCartItemList from "./CartItemList.style";
@@ -27,7 +27,7 @@ const CartItemList = () => {
             <img src={item.images[0]} />
             <div className="cart__item-text-container">
               <h4>
-                <a onClick={() => navigateToProduct(item)}>{item.name}</a>
+                <Link to={`/product?id=${item.id}`}>{item.name}</Link>
               </h4>
               <p>{convertFieldToFinnish(item.productType)}</p>
               <p>{item.size}</p>

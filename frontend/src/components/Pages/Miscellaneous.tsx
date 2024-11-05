@@ -7,8 +7,8 @@ const Miscellaneous: React.FC = () => {
   return (
     <StyledMiscellaneousPage>
       <div className="misc__intro-text-container">
-        <h1>Sekalainen sivu kaikkea</h1>
-        <h3>Ota yhteyttä tai lue kysymyksiä ja vastauksia</h3>
+        <h1>Miscellaneous page full of everything</h1>
+        <h3>Contact or read questions and answers while you sip your drink</h3>
         <p>
           Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, officia
           excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem
@@ -17,24 +17,21 @@ const Miscellaneous: React.FC = () => {
         </p>
       </div>
 
-      <div id="yhteydenotto" className="misc__contact-container">
+      <div id="contact" className="misc__contact-container">
         <div className="misc__banner">
-          <h3>Ota yhteyttä</h3>
+          <h3>Contact</h3>
         </div>
         <div className="misc__contact-text-container">
           <h4>
-            Kysymyksiä, ideoita, palautetta, mitä vain - laita viestiä tähän
-            luukkuun:{" "}
-            <a href="mailto:ville&#64;yritys&#46;com">
-              ville&#64;yritys&#46;fi
-            </a>
+            Questions, ideas, feedback, anything - shoot to this address:{" "}
+            <a href="mailto:ville&#64;yritys&#46;com">ville&#64;ville&#46;fi</a>
           </h4>
         </div>
       </div>
 
-      <div id="ukk" className="misc__qa-container">
+      <div id="faq" className="misc__qa-container">
         <div className="misc__banner">
-          <h3>UKK</h3>
+          <h3>FAQ</h3>
         </div>
         {questions.map((qa: QA) => {
           return <MiscQuestion qa={qa} />;

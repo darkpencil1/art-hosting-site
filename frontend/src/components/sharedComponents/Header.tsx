@@ -2,7 +2,7 @@ import StyledHeader from "./Header.style";
 import logo from "../../resources/images/logo.png";
 import herequest from "../../resources/images/herequest.png";
 import { AnimatePresence, motion, useAnimation, Variants } from "framer-motion";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import CartIcon from "../cartComponents/CartIcon";
 import Img from "../baseComponents/Img";
 
@@ -67,16 +67,15 @@ const Header: React.FC = () => {
         >
           {navItems.map((item: NavItem, i: number) => {
             return (
-              <motion.a
+              <motion.div
                 animate="animate"
                 exit="exit"
                 variants={navVariant}
-                onClick={() => navigate(item.href)}
                 transition={{ delay: i * 0.1, duration: 0.2 }}
                 key={i}
               >
-                {item.name}
-              </motion.a>
+                <NavLink to={item.href}>{item.name}</NavLink>
+              </motion.div>
             );
           })}
         </motion.nav>

@@ -47,6 +47,7 @@ h3 {
 a {
   font-weight: ${(p) => p.theme.fw.fw_semibold};
   color: ${(p) => p.theme.colors.primary};
+  text-decoration: none;
 }
 
 /*Scrollbar styles*/
