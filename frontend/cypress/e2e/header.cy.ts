@@ -37,7 +37,7 @@ describe("Header Component", () => {
   it("should navigate to the home page when the logo is clicked", () => {
     // Click the main logo
     cy.get(".nav__logo").click();
-    cy.url().should("eq", `${Cypress.config().baseUrl}/#/`); // Check that we're on the home page
+    cy.url().should("eq", `${Cypress.config().baseUrl}/`);
   });
 
   it("should render the CartIcon component", () => {

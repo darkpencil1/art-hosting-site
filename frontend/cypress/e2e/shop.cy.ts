@@ -7,7 +7,7 @@ describe("Shop Page", () => {
       statusCode: 200,
       body: mockProducts,
     }).as("getProducts");
-    cy.visit("/#/shop");
+    cy.visit("/shop");
   });
 
   it("should load the banner", () => {
@@ -26,6 +26,6 @@ describe("Shop Page", () => {
   it("Clicking product btn changes url correctly", () => {
     cy.wait("@getProducts").its("response.body").should("have.length", 3);
     cy.get(".product__wrapper").get(".product__cta").first().click();
-    cy.url().should("eq", "http://localhost:3000/#/product?id=1");
+    cy.url().should("eq", "http://localhost:3000/product?id=1");
   });
 });
