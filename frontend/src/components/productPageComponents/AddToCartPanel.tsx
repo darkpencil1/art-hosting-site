@@ -3,7 +3,6 @@ import AddToCartDropdown, { DropdownOption } from "./AddToCartDropdown";
 import Button from "../baseComponents/Button";
 import StyledAddToCartPanel from "./AddToCartPanel.style";
 import posterOptions from "../../resources/productOptions/posterOptions";
-import tagOptions from "../../resources/productOptions/tagOptions";
 import quantities from "../../resources/productOptions/quantity";
 import { motion, useAnimation } from "framer-motion";
 import separator from "../../resources/images/addToCart__separator.png";
@@ -25,7 +24,7 @@ export type SelectedOption = DropdownOption & {
 
 export const AddToCartPanel = () => {
   const [selectedOptions, setSelectedOptions] = useState<SelectedOption[]>([]);
-  const [options, setOptions] = useState<AddToCartOption[]>([]);
+  const [options, _] = useState<AddToCartOption[]>(posterOptions);
   const [price, setPrice] = useState<number>(0);
   const [quantity, setQuantity] = useState<number>(1);
   const { state, addItemToCart } = useAppContext();
@@ -68,15 +67,6 @@ export const AddToCartPanel = () => {
   }, [options]);
 
   useEffect(() => {
-    if (product?.productType === "poster") {
-      setOptions(posterOptions);
-    }
-    if (product?.productType === "tag") {
-      setOptions(tagOptions);
-    }
-  }, [product]);
-
-  useEffect(() => {
     calcPrice();
   }, [selectedOptions]);
 
@@ -112,6 +102,7 @@ export const AddToCartPanel = () => {
           },
           0
         );
+        //Currently no product has only one option, but this maintains the feature for future's sake
       } else if (selectedOptions.length === 1) {
         //If only 1 option available it is the quantity.
         //Use product price as the total price
@@ -156,7 +147,6 @@ export const AddToCartPanel = () => {
         cartId: generateUniqueId(),
         id: product.id,
         name: product.name,
-        productType: product.productType,
         images: product.images,
         price: price,
         quantity: quantity,
@@ -187,7 +177,7 @@ export const AddToCartPanel = () => {
         })}
 
         <div className="addToCart__price">
-          <label>Hinta</label>
+          <label>Price</label>
           <motion.p
             animate={controls}
             transition={{ duration: 0.2, ease: "easeOut" }}

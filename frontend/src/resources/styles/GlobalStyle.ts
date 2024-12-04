@@ -40,7 +40,7 @@ h2 {
 
 h3 {
   font-family: ${(props) => props.theme.ff.primary};
-  font-weight: ${(p) => p.theme.fw.fw_bold}; 
+  font-weight: ${(p) => p.theme.fw.fw_regular}; 
   font-size: ${(p) => p.theme.fs.font_lg}; 
 }
 

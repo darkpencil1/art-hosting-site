@@ -10,7 +10,8 @@ export const ShopBanner = () => {
       <div className="banner__text-container">
         <h1 className="banner__title">Shop</h1>
         <p className="banner__desc">
-          Fancy a quest to cover your wall? Look no further!
+          Fancy a poster to cover your wall? You're in the right place...once
+          this shop is operational.
         </p>
       </div>
       <ShopBannerLine container={containerRef} />

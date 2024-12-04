@@ -26,8 +26,8 @@ const StyledLander = styled(motion.div)`
     text-align: center;
   }
 
-  .lander__text-container > p {
-    width: 80%;
+  .lander__short {
+    width: 100%;
     max-width: 700px;
   }
 
@@ -37,6 +37,7 @@ const StyledLander = styled(motion.div)`
 
   .lander__subtitle {
     margin: 0;
+    font-weight: ${(p) => p.theme.fw.fw_bold};
   }
 
   @media (max-width: 1400px) {

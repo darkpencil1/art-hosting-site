@@ -7,11 +7,11 @@ const IntroText = () => {
       <div className="sidepane__text-container">
         <div className="sidepane__title-container">
           <h1>Shop</h1>
-          <h3>Cover the walls with your active quests!</h3>
+          <h3>Cover the walls with some art!</h3>
         </div>
         <p>
-          Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-          cillum sint consectetur cupidatat.
+          The shop is not actually operational, but you can still flip through
+          it :-)
         </p>
       </div>
       <Hyperlink href="/shop" content="To the shop" />

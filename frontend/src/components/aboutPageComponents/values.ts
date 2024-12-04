@@ -13,22 +13,22 @@ const values: Array<Value> = [
   {
     name: "Go deep",
     icon: heart,
-    desc: "Lorem ipsum dolor sit amet, qui minim labore",
+    desc: "Try and have a deep and true experiences of life",
   },
   {
     name: "Roots",
     icon: finland,
-    desc: "Lorem ipsum dolor sit amet, qui minim labore. Sit amet, qui.",
+    desc: "Show what you actually see, smell, hear and touch in the art",
   },
   {
     name: "Diversity",
     icon: multiplicity,
-    desc: "Lorem ipsum dolor sit amet, qui minim labore",
+    desc: "Play with different viewpoints",
   },
   {
     name: "Try to be a master",
     icon: mastery,
-    desc: "Lorem ipsum dolor sit amet, qui minim labore",
+    desc: "No kidding, try to master a craft.",
   },
 ];
 

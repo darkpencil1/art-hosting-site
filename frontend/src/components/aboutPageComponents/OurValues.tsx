@@ -4,10 +4,10 @@ import StyledOurValues from "./OurValues.style";
 const OurValues = () => {
   return (
     <StyledOurValues>
-      <h1>Values</h1>
+      <h1>Principles</h1>
       <p>
-        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-        cillum sint consectetur cupidatat.
+        I've noted I'm mostly inspired and excited by similar things that I try
+        to put into my works. Here they are:
       </p>
       <ValueContainer />
     </StyledOurValues>

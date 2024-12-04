@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledCatalogTextContainer = styled.div`
-  max-width: 50%;
+  max-width: 80%;
   h1 {
     margin-bottom: 0;
   }

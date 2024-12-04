@@ -12,8 +12,8 @@ const members: Array<TeamMember> = [
     img: ringo,
     name: "Ville",
     description:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim .",
-    imgDesc: "Lorem ipsum dolor sit amet, officia.",
+      "Greetings visitor. I'm an artist who has made this little site. I enjoy drawing, especially characters. Besides that I delve in dungeons and slay dragons.",
+    imgDesc: "This is definitely not me.",
   },
 ];
 

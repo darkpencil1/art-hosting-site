@@ -1,30 +1,24 @@
 import StyledLander from "./Lander.style";
 import Hyperlink from "../../baseComponents/Hyperlink";
 import LanderHeart from "./LanderHeart";
-import LanderProductBrief, {
-  LanderProductBriefProps,
-} from "./LanderProductBrief";
-import poster from "../../../resources/images/Taidonjahti_thumbnail.jpg";
-import posterPreview from "../../../resources/images/taidonjahti_thumbnail-preview.jpg";
-import tag from "../../../resources/images/taidonjahti-merkki-teksti.png";
-import tagPreview from "../../../resources/images/taidonjahti-tag-preview.png";
-import tagIcon from "../../../resources/images/achievement-tag-icon.svg";
-import questIcon from "../../../resources/images/quest-icon.svg";
+import LanderBrief, { LanderBriefProps } from "./LanderBrief";
+import digital from "../../../resources/images/digital.png";
+import digitalPreview from "../../../resources/images/digital.png";
+import traditional from "../../../resources/images/traditional.png";
+import traditionalPreview from "../../../resources/images/traditional.png";
 
-const productTypes: Array<LanderProductBriefProps> = [
+const productTypes: Array<LanderBriefProps> = [
   {
-    img: poster,
-    title: "Quest poster",
-    desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum.",
-    icon: questIcon,
-    preview: posterPreview,
+    img: digital,
+    title: "Digital",
+    desc: "I got some digital art you might fancy. Check it out!",
+    preview: digitalPreview,
   },
   {
-    img: tag,
-    title: "Achievement tag",
-    desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum.",
-    icon: tagIcon,
-    preview: tagPreview,
+    img: traditional,
+    title: "Traditional",
+    desc: "I enjoy doing pencil portraits on real paper!",
+    preview: traditionalPreview,
   },
 ];
 
@@ -33,20 +27,19 @@ const Lander = () => {
     <StyledLander>
       <div className="lander__row">
         <div className="lander__text-container">
-          <h1 className="lander__title">Illustrations</h1>
-          <h3 className="lander__subtitle">for various aspects of life</h3>
-          <p>
-            Hi, I'm an artist who makes illustrations with the goal of making
-            our pursuits feel more meaningful. Feel free to browse the art
-            catalog!
-          </p>
+          <h1 className="lander__title">Character art</h1>
+          <h3 className="lander__subtitle">and more!</h3>
+          <h3 className="lander__short">
+            Hi, I'm an artist who enjoys making character illustrations and
+            drawings. Feel free to browse the catalog!
+          </h3>
           <Hyperlink content="To catalog" href="/catalog" />
         </div>
         <LanderHeart />
       </div>
       <div className="lander__row lander__row--gapped">
-        {productTypes.map((item: LanderProductBriefProps) => {
-          return <LanderProductBrief {...item} key={item.title} />;
+        {productTypes.map((item: LanderBriefProps) => {
+          return <LanderBrief {...item} key={item.title} />;
         })}
       </div>
     </StyledLander>

@@ -22,12 +22,11 @@ const AboutUs = () => {
   return (
     <StyledAboutUs>
       <div className="about-us__text-container">
-        <h1>Read the story behind the art</h1>
-        <p>
-          Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-          enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
-          exercitation amet. Nisi anim cupidatat excepteur officia.
-        </p>
+        <h1>Principles that inspire the art</h1>
+        <h3>
+          My work has some repeating themes, or as an artist I find myself
+          especially moved by these principles.
+        </h3>
         <Hyperlink href="about" content="Read more" />
       </div>
       <div className="about-us__value-container">

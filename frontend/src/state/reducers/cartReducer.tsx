@@ -1,10 +1,7 @@
 import IProduct from "@shared/types/ProductInterface";
 import _ from "lodash";
 
-export type CartProduct = Pick<
-  IProduct,
-  "id" | "name" | "productType" | "images" | "price"
->;
+export type CartProduct = Pick<IProduct, "id" | "name" | "images" | "price">;
 
 const availableSecondaryProducts = ["frame"] as const;
 type secondaryProductsUnion = (typeof availableSecondaryProducts)[number];
@@ -61,7 +58,6 @@ function doesItemExist(obj1: CartItem, obj2: CartItem): boolean {
 const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case "ADD_ITEM":
-      console.log("Adding product to cart: ", action.cartItem);
       let existingItem;
       //Check if identical item has already been placed to cart
       for (const item of state.items) {

@@ -1,6 +1,5 @@
 import StyledHeader from "./Header.style";
 import logo from "../../resources/images/logo.png";
-import herequest from "../../resources/images/herequest.png";
 import { AnimatePresence, motion, useAnimation, Variants } from "framer-motion";
 import { NavLink, useNavigate } from "react-router-dom";
 import CartIcon from "../cartComponents/CartIcon";
@@ -47,18 +46,12 @@ const Header: React.FC = () => {
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.1 }} // Add a smooth transition effect
           src={logo}
-          alt="Ville's Art Cave"
+          alt="Fancy logo"
           width="60px"
         />
       </motion.div>
       <AnimatePresence>
-        <Img
-          src={herequest}
-          className="header__logo-name"
-          key="header-title"
-          onClick={() => navigate("/")}
-          width="150px"
-        />
+        <h3>darkpencil1 art vault</h3>
         <motion.nav
           animate="animate"
           exit="exit"

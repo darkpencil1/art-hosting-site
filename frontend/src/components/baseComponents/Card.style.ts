@@ -1,10 +1,11 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
 type CardProps = {
   primary?: boolean;
 };
 
-const Card = styled.div<CardProps>`
+const Card = styled(motion.div)<CardProps>`
   display: flex;
   justify-content: space-between;
   background-color: ${(props) => props.theme.bg};

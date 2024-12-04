@@ -1,8 +1,7 @@
 import express from "express";
 import cors from "cors";
 import productRouter from "./routers/product.router";
-import questRouter from "./routers/quest.router";
-import achievementRouter from "./routers/achievement.router";
+import artRouter from "./routers/art.router";
 import dbRouter from "./routers/db.router";
 import path from "path";
 
@@ -19,8 +18,7 @@ app.use(express.static(path.join(__dirname, "..", "..", "client/build")));
 
 //Routers
 app.use("/api/product", productRouter);
-app.use("/api/quest", questRouter);
-app.use("/api/achievement", achievementRouter);
+app.use("/api/art", artRouter);
 app.use("/api/db", dbRouter);
 //As default send back client index.html
 app.get("*", (_, res) => {

@@ -3,21 +3,19 @@ import StyledOurStory from "./OurStory.style";
 const OurStory = () => {
   return (
     <StyledOurStory>
-      <h1>Our story</h1>
+      <h1>Story time</h1>
       <p>
-        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-        enim labore culpa sint ad nisi Lorem pariatur mollit ex esse
-        exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit
-        nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor
-        minim nulla est proident.
+        I have been fascinated by characters for the longest time. Besides being
+        very fun to draw, through them we can experience life from new and
+        refreshing viewpoints. Simple questions like "How would it feel like to
+        be this person?" or "How they react to a situation X?" can open windows
+        to new thoughts never thought before.
         <br />
         <br />
-        Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt
-        ex occaecat reprehenderit commodo officia dolor Lorem duis laboris
-        cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi
-        laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit
-        commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint
-        cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+        So what motivates me is a sense of wonder. It's very precious to come
+        across new ideas or emotions. It's like a wave washing over you, waking
+        you up to a more present and exciting experience. I've boiled some of
+        these ideas into principles that are listed below.
       </p>
     </StyledOurStory>
   );

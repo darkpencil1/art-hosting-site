@@ -5,82 +5,42 @@ const products: Array<IProduct> = [
   {
     id: 5,
     name: "Visionbaker's Bay",
-    productType: "poster",
-    primer:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
-    snapshot:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-    description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. 
-      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.`,
+    primer: "Travel through Visionbaker's Bay and find yourself a vision.",
+    snapshot: "A map for those who are seeking a new vision.",
+    description:
+      "I'm just a placeholder description — here to hold the fort until the real words show up. I’m here for moral support and to keep the layout from collapsing in existential crisis.",
     price: 20.0,
     imageUrl: `${baseUrl}visionbakers-bay.jpg`,
-    preview: `${baseUrl}visionbakers-bay-preview.jpg`,
+    preview: `${baseUrl}visionbakers-bay_preview.jpg`,
     images: [`${baseUrl}visionbakers-bay.jpg`],
     orientation: Orientation.PORTRAIT,
   },
   {
     id: 1,
     name: "The Skillchase",
-    productType: "poster",
-    primer:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
-    snapshot:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-    description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. 
-      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.`,
+    primer: "Poster for those who are learning a skill.",
+    snapshot: "A poster about the journey of learning a skill.",
+    description:
+      "I'm just a placeholder description — here to hold the fort until the real words show up. I’m here for moral support and to keep the layout from collapsing in existential crisis.",
     price: 20.0,
-    imageUrl: `${baseUrl}Taidonjahti_thumbnail.jpg`,
-    preview: `${baseUrl}taidonjahti-preview.jpg`,
-    images: [`${baseUrl}Taidonjahti_thumbnail.jpg`],
+    imageUrl: `${baseUrl}taidonjahti.jpg`,
+    preview: `${baseUrl}taidonjahti_preview.jpg`,
+    images: [`${baseUrl}taidonjahti.jpg`],
     orientation: Orientation.PORTRAIT,
   },
   {
     id: 3,
     name: "The School of Ailments",
-    productType: "poster",
-    primer:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
+    primer: "Travel through the School of Ailments in search of a recovery.",
     snapshot:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-    description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. 
-      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.`,
+      "Inspiring and encouraging poster for finding a cure or recovering.",
+    description:
+      "I'm just a placeholder description — here to hold the fort until the real words show up. I’m here for moral support and to keep the layout from collapsing in existential crisis.",
     price: 20.0,
-    imageUrl: `${baseUrl}vaivojen-koulu_thumbnail.jpg`,
-    preview: `${baseUrl}vaivojen-koulu-preview.jpg`,
-    images: [`${baseUrl}vaivojen-koulu_thumbnail.jpg`],
+    imageUrl: `${baseUrl}vaivojen-koulu.jpg`,
+    preview: `${baseUrl}vaivojen-koulu_preview.jpg`,
+    images: [`${baseUrl}vaivojen-koulu.jpg`],
     orientation: Orientation.PORTRAIT,
-  },
-  {
-    id: 2,
-    name: "This one has started",
-    productType: "tag",
-    primer:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
-    snapshot:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-    description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. 
-      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.`,
-    price: 12.0,
-    imageUrl: `${baseUrl}taidonjahti-merkki-teksti.png`,
-    preview: `${baseUrl}taidonjahti-tag-preview.png`,
-    images: [`${baseUrl}taidonjahti-merkki-teksti.png`],
-    orientation: Orientation.LANDSCAPE,
-  },
-  {
-    id: 4,
-    name: "Soaked, pecked, learned",
-    productType: "tag",
-    primer:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit. Phasellus pretium congue venenatis.",
-    snapshot:
-      "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit",
-    description: `Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. 
-      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.`,
-    price: 12.0,
-    imageUrl: `${baseUrl}vaivojen-koulu-merkki-teksti.png`,
-    preview: `${baseUrl}vaivojen-koulu-tag-preview.png`,
-    images: [`${baseUrl}vaivojen-koulu-merkki-teksti.png`],
-    orientation: Orientation.LANDSCAPE,
   },
 ];
 
