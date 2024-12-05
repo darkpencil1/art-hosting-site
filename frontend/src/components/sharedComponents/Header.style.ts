@@ -26,10 +26,6 @@ const StyledHeader = styled(motion.header)`
     cursor: pointer;
   }
 
-  .header__logo-name {
-    cursor: pointer;
-  }
-
   nav {
     display: flex;
     flex-direction: row;

@@ -3,6 +3,9 @@ import mockProducts from "../fixtures/mockProducts";
 
 describe("Shop Page", () => {
   beforeEach(() => {
+    // While mobile width guard is in place, use a larger viewport
+    cy.viewport(1280, 720);
+
     cy.intercept("GET", "/api/product", {
       statusCode: 200,
       body: mockProducts,
