@@ -2,7 +2,7 @@ import styled from "styled-components";
 import bg from "../../resources/images/website-banner-lg.jpg";
 
 const StyledBanner = styled.div`
-  height: 40vh;
+  height: 370px;
   width: 100%;
 
   display: flex;

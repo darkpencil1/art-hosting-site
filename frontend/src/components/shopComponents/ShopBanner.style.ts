@@ -6,13 +6,13 @@ const StyledShopBanner = styled(Row)`
   height: 370px;
   position: relative;
   overflow: hidden;
-  margin: 0 ${(p) => p.theme.spacing.spacing_7};
   background-image: url(${banner});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: start;
-  border-radius: 30px;
+
+  border-radius: ${(p) => p.theme.br.br_large};
   border-right: 5px solid ${(p) => p.theme.colors.primary_shadow};
   border-bottom: 5px solid ${(p) => p.theme.colors.primary_shadow};
 

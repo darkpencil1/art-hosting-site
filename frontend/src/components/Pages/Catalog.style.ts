@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const StyledCatalog = styled.div`
-  margin: 2rem;
+  margin: 0 3rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
 

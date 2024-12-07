@@ -30,8 +30,8 @@ const Lander = () => {
           <h1 className="lander__title">Character art</h1>
           <h3 className="lander__subtitle">and more!</h3>
           <h3 className="lander__short">
-            Hi, I'm an artist who enjoys making character illustrations and
-            drawings. Feel free to browse the catalog!
+            Welcome to darkpencil1's art site. I enjoy making character
+            illustrations and drawings. Hop in to browse my art catalog!
           </h3>
           <Hyperlink content="To catalog" href="/catalog" />
         </div>
