@@ -1,4 +1,4 @@
-# Art hosting e-commerce site
+# Art portfolio meets e-commerce site
 ## See at: [https://darkpencil1-art-vault.onrender.com](https://darkpencil1-art-vault.onrender.com)
 
 This web app is a hobby project where my goal is to combine an art portfolio and eCommerce site.
